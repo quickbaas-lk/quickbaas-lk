@@ -15,9 +15,9 @@
 ## 🎯 Purpose of the Repository
 
 > [!IMPORTANT]
-> This repository documents the build of **QuickBaas.lk**, a prototype marketplace platform developed for **SE2204 Software Project Management**, connecting homeowners with verified local repair technicians (plumbers, electricians, AC technicians, carpenters) across Sri Lanka.
+> This repository documents the build of **QuickBaas.lk**, a prototype marketplace platform developed for **Software Project Management**, connecting homeowners with verified local repair technicians (plumbers, electricians, AC technicians, carpenters) across Sri Lanka.
 >
-> The scope is intentionally a **prototype**: a Web (PWA) application only — no native mobile app — with a **simulated payment flow** instead of a real payment gateway, built to demonstrate the core booking journey end-to-end within a 20-week academic timeline.
+> The scope is intentionally a **prototype**: a Web (PWA) application only — no native mobile app — with a **simulated payment flow** instead of a real payment gateway, built to demonstrate the core booking journey end-to-end within a 15-week academic timeline.
 
 Whether you're a teammate picking up a feature branch, a reviewer checking the architecture, or just browsing the repo — this README tracks what's built, what's planned, and how the whole system fits together.
 
@@ -162,10 +162,6 @@ VITE_API_URL=http://localhost:5000
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
-
-> [!WARNING]
-> **Never commit `.env` files.** Only `.env.example` (with placeholder values) should be in Git. Each team member creates their own local `.env`.
-
 ---
 
 ## 📡 API Overview
@@ -207,19 +203,6 @@ main
 
 ---
 
-## 👥 Team
-
-| Member | Responsibility |
-|---|---|
-| Sandaru Lakshitha | Backend & Database |
-| Imesh Adithya | Frontend (Homeowner side) |
-| Chamath Hirushan | Frontend (Technician side) |
-| Sahan Siriwardana | GPS Matching & Backend Services |
-| Dinuk Dilshan | Auth & Admin Dashboard |
-| Sadeepa Lakshan | Testing, Documentation & DevOps |
-
----
-
 ## ☁️ Deployment
 
 ```
@@ -232,9 +215,6 @@ GitHub
         ↓
    Supabase (Database + Auth, free tier)
 ```
-
-> [!NOTE]
-> Free-tier limits (bandwidth, sleep time, row limits) should be re-checked on the provider's site before final deployment — free tiers are not guaranteed to stay the same.
 
 ---
 
@@ -250,4 +230,4 @@ GitHub
 
 ## 📄 License
 
-Academic project — SE2204 Software Project Management.
+Academic project — Software Project Management
