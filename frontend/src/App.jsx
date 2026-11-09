@@ -1,7 +1,10 @@
 import { useState } from 'react';
+
 import Home from './pages/Home';
 import Login from './pages/Login';
 import HomeownerDashboard from './pages/HomeownerDashboard';
+import TechnicianRegister from './pages/TechnicianRegister';
+
 import './App.css';
 
 function App() {
@@ -9,22 +12,30 @@ function App() {
 
   return (
     <div className="App">
+
       {currentPage === 'home' && (
-        <Home 
-          onLoginClick={() => setCurrentPage('login')} 
+        <Home
+          onLoginClick={() => setCurrentPage('login')}
         />
       )}
 
       {currentPage === 'login' && (
-        <Login 
+        <Login
           onLoginSuccess={() => setCurrentPage('dashboard')}
-          onNavigateToRegister={() => alert('Navigate to Register page')} 
+          onNavigateToRegister={() =>
+            setCurrentPage('technicianRegister')
+          }
         />
       )}
 
       {currentPage === 'dashboard' && (
         <HomeownerDashboard />
       )}
+
+      {currentPage === 'technicianRegister' && (
+        <TechnicianRegister />
+      )}
+
     </div>
   );
 }

@@ -704,3 +704,337 @@ body {
   color: #15803d;
   font-weight: 500;
 }
+
+
+
+
+/* TECHNICIAN REGISTRATION PAGE */
+
+.technician-register-page {
+  min-height: 100vh;
+  background: #f7f7ff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.technician-register-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.technician-register-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.partner-badge {
+  display: inline-block;
+  background: #e8efff;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.technician-register-header h1 {
+  font-size: 22px;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.technician-register-header p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 650px;
+  margin: 0;
+}
+
+/* PARTNER STATUS */
+
+.partner-status {
+  display: flex;
+  background: #e9eaf5;
+  border-radius: 10px;
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.status-item {
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+}
+
+.status-item.active {
+  background: #ffffff;
+  color: #1d4ed8;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* PROGRESS STEPS */
+
+.technician-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.technician-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #e8e9f4;
+  padding: 16px;
+  border-radius: 10px;
+  color: #64748b;
+}
+
+.technician-step.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.step-circle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #dce1ef;
+  color: #475569;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.technician-step.active .step-circle {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.technician-step small {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.technician-step strong {
+  font-size: 13px;
+}
+
+/* PROFILE CARD */
+
+.technician-profile-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.profile-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.profile-card-heading h2 {
+  font-size: 17px;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.profile-card-heading p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.profile-icon {
+  color: #1d4ed8;
+  font-size: 26px;
+}
+
+/* FORM */
+
+.technician-form-group {
+  margin-bottom: 24px;
+}
+
+.technician-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.technician-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.technician-form-group input,
+.technician-form-group select,
+.technician-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background: #eef0fb;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #334155;
+  outline: none;
+}
+
+.technician-form-group input:focus,
+.technician-form-group select:focus,
+.technician-form-group textarea:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+}
+
+.technician-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* SKILLS */
+
+.trade-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.trade-skill {
+  border: none;
+  background: #eef0fb;
+  color: #334155;
+  padding: 10px 14px;
+  border-radius: 25px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.trade-skill:hover {
+  background: #dbeafe;
+}
+
+.trade-skill.selected {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+/* ERROR & SUCCESS */
+
+.technician-error {
+  color: #dc2626;
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+
+.technician-success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* FOOTER BUTTON */
+
+.technician-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.technician-proceed-button {
+  background: #0645c0;
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.technician-proceed-button:hover {
+  background: #1d4ed8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .technician-register-page {
+    padding: 20px 12px;
+  }
+
+  .technician-register-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .partner-status {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .status-item {
+    flex: 1;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+
+  .technician-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .technician-step {
+    padding: 12px;
+  }
+
+  .technician-profile-card {
+    padding: 20px 14px;
+  }
+
+  .technician-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .profile-card-heading h2 {
+    font-size: 15px;
+  }
+
+  .profile-card-heading p {
+    line-height: 1.5;
+  }
+
+  .technician-form-footer {
+    justify-content: stretch;
+  }
+
+  .technician-proceed-button {
+    width: 100%;
+  }
+}
