@@ -1,10 +1,9 @@
-import { useState } from 'react';
 
+import { useState } from 'react';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import HomeownerDashboard from './pages/HomeownerDashboard';
 import TechnicianRegister from './pages/TechnicianRegister';
-
 import './App.css';
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
 
   return (
     <div className="App">
-
       {currentPage === 'home' && (
         <Home
           onLoginClick={() => setCurrentPage('login')}
@@ -35,7 +33,6 @@ function App() {
       {currentPage === 'technicianRegister' && (
         <TechnicianRegister />
       )}
-
     </div>
   );
 }
