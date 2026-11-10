@@ -398,6 +398,385 @@ body {
   font-size: 0.85rem;
 }
 
+/* ==========================================
+   Homeowner Dashboard Styles
+   ========================================== */
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Dashboard Top Navigation Bar */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dashboard-logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboard-logo-link h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dashboard-logo-link span {
+  color: #16a34a;
+}
+
+.logout-btn:hover {
+  background-color: #fef2f2;
+  color: #ef4444;
+  border-color: #fca5a5;
+}
+
+/* Welcome Banner Section */
+.welcome-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #dcfce7;
+}
+
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 0.35rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 0.75rem;
+}
+
+.welcome-title {
+  font-size: 1.875rem;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
+
+.welcome-subtitle {
+  color: #475569;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.status-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+.status-val {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #15803d;
+}
+
+/* Dashboard Search Box */
+.dashboard-search-box {
+  display: flex;
+  gap: 0.75rem;
+  background: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.search-input, 
+.location-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+  color: #64748b;
+  border: 1px solid #f1f5f9;
+}
+
+.search-input input, 
+.location-input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.find-tech-btn {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.find-tech-btn:hover {
+  background-color: #15803d;
+}
+
+/* Active Booking Card */
+.dashboard-section {
+  margin-bottom: 2.5rem;
+}
+
+.active-booking-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #16a34a;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.booking-badge {
+  display: inline-block;
+  background-color: #dcfce7;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.service-tag {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-left: 0.5rem;
+}
+
+.active-booking-info h3 {
+  margin: 0.25rem 0 0.5rem 0;
+  color: #0f172a;
+}
+
+.active-booking-info p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.active-booking-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.chat-btn:hover {
+  background-color: #1e293b;
+}
+
+.view-estimate-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.view-estimate-btn:hover {
+  background-color: #e2e8f0;
+}
+
+/* Technicians Grid */
+.section-header {
+  margin-bottom: 1.25rem;
+}
+
+.sub-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #16a34a;
+  letter-spacing: 0.05em;
+}
+
+.section-header h2 {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.technicians-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.technician-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.technician-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tech-details {
+  flex: 1;
+}
+
+.tech-details h4 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.tech-role {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.tech-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.tech-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+  padding: 0.75rem 0;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+.tech-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tech-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.price-value {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.book-now-btn {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #15803d;
+}
+
 /* RESPONSIVE CSS FOR MOBILE (768px and below) */
 
 @media (max-width: 768px) {
@@ -498,7 +877,6 @@ body {
     font-size: 1rem;
   }
 
-  /* 5. TRUST BADGES VERTICAL STACK */
   .trust-badges {
     display: flex;
     flex-direction: column;
@@ -527,7 +905,6 @@ body {
     padding: 1rem 0.5rem;
   }
 }
-/* LOGIN PAGE STYLES */
 .login-page-container {
   min-height: 90vh;
   display: flex;
@@ -1037,4 +1414,16 @@ body {
   .technician-proceed-button {
     width: 100%;
   }
+}
+
+.technician-back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.technician-back-link:hover {
+  text-decoration: underline;
 }

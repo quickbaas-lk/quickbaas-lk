@@ -1,4 +1,6 @@
+
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const tradeSkills = [
   'Plumber',
@@ -26,6 +28,7 @@ function TechnicianRegister() {
   const [selectedSkills, setSelectedSkills] = useState(['Plumber']);
   const [district, setDistrict] = useState('Colombo District');
   const [hourlyRate, setHourlyRate] = useState('2500');
+
   const [professionalSummary, setProfessionalSummary] = useState(
     'Licensed electrical technician with 8 years of solid background in domestic troubleshooting and smart home integrations.'
   );
@@ -87,12 +90,19 @@ function TechnicianRegister() {
       setSuccessMessage(
         'Profile details completed! You can proceed to NIC verification.'
       );
+    } else {
+      setSuccessMessage('');
     }
   };
 
   return (
     <div className="technician-register-page">
       <div className="technician-register-container">
+
+        {/* Back to Login */}
+        <Link to="/login" className="technician-back-link">
+          ← Back to Login
+        </Link>
 
         {/* Header */}
         <header className="technician-register-header">
@@ -194,7 +204,9 @@ function TechnicianRegister() {
             </div>
 
             {errors.skills && (
-              <p className="technician-error">{errors.skills}</p>
+              <p className="technician-error">
+                {errors.skills}
+              </p>
             )}
           </div>
 
@@ -221,7 +233,9 @@ function TechnicianRegister() {
               </select>
 
               {errors.district && (
-                <p className="technician-error">{errors.district}</p>
+                <p className="technician-error">
+                  {errors.district}
+                </p>
               )}
             </div>
 

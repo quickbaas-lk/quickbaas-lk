@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom'; /* after importing the react-router-dom */
 import { User } from 'lucide-react';
 
-const Navbar = ({ onLoginClick }) => {
+const Navbar = () => {
   return (
     <header className="navbar-container">
       <div className="logo">
-        <img src="/main.png" alt="QuickBaas Logo" className="nav-logo" />
+        <Link to="/"> {/* after importing the react-router-dom */}
+          <img src="/main.png" alt="QuickBaas Logo" className="nav-logo" />
+        </Link>
       </div>
 
       <nav className="nav-links">
@@ -16,13 +19,13 @@ const Navbar = ({ onLoginClick }) => {
       <div className="nav-actions">
         <button className="lang-btn">EN</button>
         
-        <button className="login-btn" onClick={onLoginClick}>
-           Log in
-        </button>      
+        <Link to="/login" className="login-btn"> {/* after importing the react-router-dom */}
+          Log in
+        </Link>
         
-        <button className="join-btn">
+        <Link to="/register-technician" className="join-btn"> {/* after importing the react-router-dom */}
           Join as technician <User size={16} />
-        </button>
+        </Link>
       </div>
     </header>
   );

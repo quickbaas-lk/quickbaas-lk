@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -9,35 +9,27 @@ import TechnicianRegister from './pages/TechnicianRegister';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Landing Page */}
+          <Route path="/" element={<Home />} />
 
-      {currentPage === 'home' && (
-        <Home
-          onLoginClick={() => setCurrentPage('login')}
-        />
-      )}
+          {/* Login Page */}
+          <Route path="/login" element={<Login />} />
 
-      {currentPage === 'login' && (
-        <Login
-          onLoginSuccess={() => setCurrentPage('dashboard')}
-          onNavigateToRegister={() =>
-            setCurrentPage('technicianRegister')
-          }
-        />
-      )}
+          {/* Homeowner Dashboard */}
+          <Route path="/dashboard" element={<HomeownerDashboard />} />
 
-      {currentPage === 'dashboard' && (
-        <HomeownerDashboard />
-      )}
-
-      {currentPage === 'technicianRegister' && (
-        <TechnicianRegister />
-      )}
-
-    </div>
+          {/* Technician Registration */}
+          <Route
+            path="/technician-register"
+            element={<TechnicianRegister />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
