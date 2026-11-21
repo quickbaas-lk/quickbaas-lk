@@ -230,4 +230,4 @@ GitHub
 
 ## 📄 License
 
-Academic project — Software Project Management
+@2026 Academic project — Software Project Management
