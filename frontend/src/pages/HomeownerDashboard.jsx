@@ -1,9 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import DashboardNavbar from '../components/DashboardNavbar';
 import Footer from '../components/Footer';
-import { 
-  MapPin, CheckCircle, Search, 
-  MessageSquare, ExternalLink, Star, Shield, Clock
+import {
+  MapPin,
+  CheckCircle,
+  Search,
+  MessageSquare,
+  ExternalLink,
+  Star,
+  Shield,
+  Clock,
 } from 'lucide-react';
 
 export default function HomeownerDashboard() {
@@ -11,6 +17,7 @@ export default function HomeownerDashboard() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    navigate('/service-request');
   };
 
   return (
@@ -29,7 +36,7 @@ export default function HomeownerDashboard() {
               <h1 className="welcome-title">Hello, Doe!</h1>
               <p className="welcome-subtitle">What needs fixing around your home today?</p>
             </div>
-            
+
             <div className="status-badge">
               <Shield size={20} color="#15803d" />
               <div>
@@ -49,7 +56,13 @@ export default function HomeownerDashboard() {
               <MapPin size={18} />
               <input type="text" defaultValue="Colombo 07" />
             </div>
-            <button type="submit" className="find-tech-btn">Find Technicians →</button>
+            <button
+              type="button"
+              className="find-tech-btn"
+              onClick={() => navigate('/service-request')}
+            >
+              Find Technicians →
+            </button>
           </form>
         </div>
 
@@ -106,7 +119,13 @@ export default function HomeownerDashboard() {
                   <span className="price-label">Starting from</span>
                   <span className="price-value">Rs. 3,500</span>
                 </div>
-                <button className="book-now-btn" onClick={() => navigate('/book')}>Book Now</button>
+                <button
+                  type="button"
+                  className="book-now-btn"
+                  onClick={() => navigate('/service-request')}
+                >
+                  Book Now
+                </button>
               </div>
             </div>
 
@@ -131,7 +150,13 @@ export default function HomeownerDashboard() {
                   <span className="price-label">Starting from</span>
                   <span className="price-value">Rs. 3,000</span>
                 </div>
-                <button className="book-now-btn" onClick={() => navigate('/book')}>Book Now</button>
+                <button
+                  type="button"
+                  className="book-now-btn"
+                  onClick={() => navigate('/service-request')}
+                >
+                  Book Now
+                </button>
               </div>
             </div>
 
@@ -156,7 +181,13 @@ export default function HomeownerDashboard() {
                   <span className="price-label">Starting from</span>
                   <span className="price-value">Rs. 2,500</span>
                 </div>
-                <button className="book-now-btn" onClick={() => navigate('/book')}>Book Now</button>
+                <button
+                  type="button"
+                  className="book-now-btn"
+                  onClick={() => navigate('/service-request')}
+                >
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
