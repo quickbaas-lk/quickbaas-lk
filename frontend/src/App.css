@@ -1,28 +1,14 @@
-/* QuickBaas.lk Global & Component Styles */
+/* QuickBaas.lk Component & Page Styles */
 
-:root {
-  --primary-blue: #1d4ed8;
-  --primary-hover: #1e40af;
-  --bg-light: #f8fafc;
-  --text-dark: #0f172a;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
-}
-
-body {
-  margin: 0;
-  font-family: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #ffffff;
-  color: var(--text-dark);
-}
-
-/* NAVBAR */
+/* ==========================================
+   1. NAVBAR & SHARED COMPONENTS
+   ========================================== */
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;          
-  padding: 0 5%;         
+  height: 70px;
+  padding: 0 5%;
   border-bottom: 1px solid var(--border-color);
   background-color: #ffffff;
   position: sticky;
@@ -42,10 +28,10 @@ body {
 }
 
 .nav-logo {
-  height: 150px;       
-  max-height: 100%;   
+  height: 150px;
+  max-height: 100%;
   width: auto;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .nav-links a {
@@ -107,7 +93,9 @@ body {
   text-decoration: none !important;
 }
 
-/* HERO SECTION */
+/* ==========================================
+   2. HERO & SEARCH SECTION
+   ========================================== */
 .hero-container {
   text-align: center;
   padding: 4rem 1rem 2rem 1rem;
@@ -133,7 +121,6 @@ body {
   margin: 0 auto 2.5rem auto;
 }
 
-/* SEARCH BOX */
 .search-box {
   display: flex;
   align-items: center;
@@ -206,7 +193,9 @@ body {
   gap: 0.4rem;
 }
 
-/* CATEGORIES SECTION */
+/* ==========================================
+   3. CATEGORIES, HOW IT WORKS & FEATURES
+   ========================================== */
 .categories-section {
   padding: 4rem 5%;
   max-width: 1200px;
@@ -282,7 +271,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* HOW IT WORKS */
 .how-it-works-section {
   background-color: var(--bg-light);
   padding: 4rem 5%;
@@ -354,7 +342,6 @@ body {
   margin: 0;
 }
 
-/* FEATURES BANNER */
 .features-banner {
   padding: 3rem 5%;
   max-width: 1200px;
@@ -396,27 +383,26 @@ body {
   line-height: 1.4;
 }
 
-/* FOOTER */
 .main-footer {
   text-align: center;
   padding: 2rem;
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.85rem;
+  margin-top: auto;
 }
 
 /* ==========================================
-   Homeowner Dashboard Styles
+   4. HOMEOWNER DASHBOARD STYLES
    ========================================== */
-
 .dashboard-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   box-sizing: border-box;
 }
 
-/* Dashboard Top Navigation Bar */
 .logout-btn {
   display: flex;
   align-items: center;
@@ -453,7 +439,6 @@ body {
   border-color: #fca5a5;
 }
 
-/* Welcome Banner Section */
 .welcome-section {
   background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
   border-radius: 1rem;
@@ -519,7 +504,6 @@ body {
   color: #15803d;
 }
 
-/* Dashboard Search Box */
 .dashboard-search-box {
   display: flex;
   gap: 0.75rem;
@@ -530,7 +514,7 @@ body {
   flex-wrap: wrap;
 }
 
-.search-input, 
+.search-input,
 .location-input {
   display: flex;
   align-items: center;
@@ -544,7 +528,7 @@ body {
   border: 1px solid #f1f5f9;
 }
 
-.search-input input, 
+.search-input input,
 .location-input input {
   border: none;
   outline: none;
@@ -569,7 +553,6 @@ body {
   background-color: #15803d;
 }
 
-/* Active Booking Card */
 .dashboard-section {
   margin-bottom: 2.5rem;
 }
@@ -658,19 +641,18 @@ body {
   background-color: #e2e8f0;
 }
 
-/* Technicians Grid */
-.section-header {
+.dashboard-section .section-header {
   margin-bottom: 1.25rem;
 }
 
-.sub-title {
+.dashboard-section .sub-title {
   font-size: 0.75rem;
   font-weight: 700;
   color: #16a34a;
   letter-spacing: 0.05em;
 }
 
-.section-header h2 {
+.dashboard-section .section-header h2 {
   margin: 0.25rem 0 0 0;
   font-size: 1.5rem;
   color: #0f172a;
@@ -784,134 +766,9 @@ body {
   background-color: #15803d;
 }
 
-/* RESPONSIVE CSS FOR MOBILE (768px and below) */
-
-@media (max-width: 768px) {
-
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6rem 0.5rem;   
-    min-height: 60px;       
-    gap: 0.5rem;
-  }
-
-  /* 2. DEDICATED LOGO ADJUSTMENTS */
-  .logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    margin-left: -25px;
-    padding-left: 0;
-  }
-
-  .nav-logo {
-    height: 100px;           
-    max-width: 140px;
-    width: auto;           
-    max-height: 100%;       
-    object-fit: contain;
-  }
-
-  /* 3. NAV LINKS & ACTIONS */
-  .nav-links {
-    display: none;          
-  }
-
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    flex-shrink: 0;
-    padding-left: 0;
-    margin-right: 15px;
-  }
-
-  .lang-btn, 
-  .login-btn {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.3rem;
-    white-space: nowrap;
-  }
-
-  .join-btn {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.7rem;
-    white-space: nowrap;
-  }
-
-  /* 4. HERO SECTION & SEARCH BOX FIXES */
-  .hero-container {
-    padding: 2rem 1rem 1rem 1rem;
-  }
-
-  .hero-title {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    margin-bottom: 0.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-  }
-
-  .search-box {
-    display: flex;
-    flex-direction: column;
-    padding: 0.8rem;
-    gap: 0.8rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-
-  .search-input-group {
-    width: 100%;
-    box-sizing: border-box;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.5rem 0;
-  }
-
-  .search-input-group:nth-child(2) {
-    border-bottom: none;
-  }
-
-  .find-baas-btn {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-
-  .trust-badges {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    margin-top: 1.5rem;
-  }
-
-  .trust-badges span {
-    font-size: 0.85rem;
-  }
-
-  /* 6. CATEGORIES GRID (2 Columns for Mobile) */
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
-  }
-
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-  }
-
-  .category-card {
-    padding: 1rem 0.5rem;
-  }
-}
+/* ==========================================
+   5. LOGIN & AUTHENTICATION PAGE STYLES
+   ========================================== */
 .login-page-container {
   min-height: 90vh;
   display: flex;
@@ -1087,4 +944,139 @@ body {
   font-size: 0.8rem;
   color: #15803d;
   font-weight: 500;
+}
+
+/* ==========================================
+   6. RESPONSIVE CSS FOR MOBILE (768px and below)
+   (Always keep at the very bottom of App.css)
+   ========================================== */
+@media (max-width: 768px) {
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.5rem;
+    min-height: 60px;
+    gap: 0.5rem;
+  }
+
+  /* DEDICATED LOGO ADJUSTMENTS */
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: -25px;
+    padding-left: 0;
+  }
+
+  .nav-logo {
+    height: 100px;
+    max-width: 140px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* NAV LINKS & ACTIONS */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+    padding-left: 0;
+    margin-right: 15px;
+  }
+
+  .lang-btn,
+  .login-btn {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.3rem;
+    white-space: nowrap;
+  }
+
+  .join-btn {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  /* HERO SECTION & SEARCH BOX FIXES */
+  .hero-container {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    gap: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .search-input-group {
+    width: 100%;
+    box-sizing: border-box;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem 0;
+  }
+
+  .search-input-group:nth-child(2) {
+    border-bottom: none;
+  }
+
+  .find-baas-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .trust-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .trust-badges span {
+    font-size: 0.85rem;
+  }
+
+  /* CATEGORIES GRID (2 Columns for Mobile) */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .category-card {
+    padding: 1rem 0.5rem;
+  }
+
+  /* LOGIN CARD MOBILE ADJUSTMENT */
+  .login-card {
+    padding: 1.5rem;
+  }
 }
