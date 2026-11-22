@@ -1457,3 +1457,66 @@
     padding: 1.5rem;
   }
 }
+/* Onboarding Navbar */
+.onboarding-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.onboarding-navbar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.onboarding-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.onboarding-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.onboarding-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.onboarding-back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.onboarding-back-home-btn:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
