@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -7,7 +7,8 @@ import {
   Check,
   MapPin,
 } from 'lucide-react';
-import OnboardingNavbar from '../onboarding/OnboardingNavbar';
+import ToNavbar from '../components/ToNavbar';
+import '../styles/TechnicianOnboarding.css';
 
 const TRADE_SKILLS = [
   'Plumber',
@@ -58,12 +59,11 @@ const STEPS = [
   { number: 3, title: 'STEP 03', label: 'Review & Status' },
 ];
 
-function TechnicianOnboarding({ onProceedStep2 }) {
+function TechnicianOnboarding() {
   const navigate = useNavigate();
+  const currentStep = 1; // this page is Step 1 
 
   const [statusTab, setStatusTab] = useState('active');
-  const [currentStep, setCurrentStep] = useState(1);
-
   const [selectedSkills, setSelectedSkills] = useState(['Plumber']);
   const [district, setDistrict] = useState('Colombo District');
   const [hourlyRate, setHourlyRate] = useState('2500');
@@ -119,18 +119,13 @@ function TechnicianOnboarding({ onProceedStep2 }) {
       summary: summary.trim(),
     };
 
-    if (typeof onProceedStep2 === 'function') {
-      onProceedStep2(step1Data);
-    } else {
-      setCurrentStep(2);
-      // අවශ්‍ය නම් වෙනම route එකකට navigate කරන්නත් පුළුවන්:
-      // navigate('/technician-onboarding/nic-upload', { state: { step1Data } });
-    }
+    // pass the data from react-router-dom to next step
+    navigate('/technician-onboarding/nic-upload', { state: { step1Data } });
   };
 
   return (
     <div className="qb-onboarding-page">
-      <OnboardingNavbar />
+      <ToNavbar />
 
       <div className="qb-onboarding-wrapper">
         <div className="qb-onboarding-container">
