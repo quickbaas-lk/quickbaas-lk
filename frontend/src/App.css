@@ -27,6 +27,7 @@
   color: var(--primary-blue);
 }
 
+/* Global Reusable Logo Class (Used in both Home Navbar & ToNavbar) */
 .nav-logo {
   height: 150px;
   max-height: 100%;
@@ -176,6 +177,10 @@
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.find-baas-btn:hover {
+  background-color: var(--primary-hover);
 }
 
 .trust-badges {
